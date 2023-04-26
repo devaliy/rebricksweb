@@ -4,35 +4,31 @@ require('../config/init.php');
 
 
 if(isset($_POST['login']) && !empty($_POST['login'])){
-	$username = $_POST['username'];
+	$email = $_POST['email'];
 	$password = $_POST['password'];
 
 	if(!empty($username) or !empty($password)){
-	        $login_det = $getFromGeneric->login('user', array('username' => $username, 'username' => $password));
+	        $login_det = $getFromGeneric->login('user', array('email' => $email, 'password' => md5($password)));
            
             if(!$login_det){
                 echo "<script type='text/javascript'>
-           alert('Invalid Username or Password.') </script>";
+           alert('Invalid Email or Password.') </script>";
               
           
 			
 			    }else{
 
-            if($login_det->roles == 'a:0:{}'){
+          
               $_SESSION['id'] = $login_det->id;
-              $_SESSION['school_id'] = @$login_det->school_id;
-              $url = 'student/dashboard';
+              $_SESSION['email'] = @$login_det->email;
+              $_SESSION['fullname'] = @$login_det->fullname;
+            
              
-               }else{
-                $_SESSION['staff_id'] = $login_det->id;
-                $_SESSION['school_id'] = @$login_det->school_id;
-                $url = 'staff/dashboard';
-               
-                
-               }
+           
             echo "<script type='text/javascript'>
                    alert(' Welcome to RedBricks')
                     </script>";
+                    header("Location: ../index");
           }
 
 	//	}

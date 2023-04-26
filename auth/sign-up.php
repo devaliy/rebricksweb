@@ -9,7 +9,7 @@ if(isset($_POST['register']) && !empty($_POST['register'])){
 	$password = $_POST['password'];
 	$cpassword = $_POST['cpassword'];
 
-	        $register = $getFromGeneric->create('user', array('fullname' => $fullname, 'email' => $email, 'password' => $password));
+	        $register = $getFromGeneric->create('user', array('fullname' => $fullname, 'email' => $email, 'password' => md5($password)));
            
             if(!$register){
                 echo "<script type='text/javascript'>
