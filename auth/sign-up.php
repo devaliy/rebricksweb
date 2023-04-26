@@ -182,7 +182,7 @@ if(isset($_POST['register']) && !empty($_POST['register'])){
                             </label>
                         </div>
                     <div class="footer text-center">
-                        <input type="submit" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light" value="SIGN UP">
+                        <input type="submit" name="register" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light" value="SIGN UP">
                         <h6 class="m-t-20"><a class="link" href="sign-in">You already have a membership?</a></h6>
                     </div>
                 </form>
