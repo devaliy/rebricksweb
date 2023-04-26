@@ -1,4 +1,71 @@
-﻿<!doctype html>
+﻿<?php
+
+require('../config/init.php');
+
+
+if(isset($_POST['register']) && !empty($_POST['register'])){
+	$email = $_POST['email'];
+	$fullname = $_POST['fullname'];
+	$password = $_POST['password'];
+	$cpassword = $_POST['cpassword'];
+
+	        $register = $getFromGeneric->create('user', array('fullname' => $fullname, 'email' => $email, 'password' => $password));
+           
+            if(!$register){
+                echo "<script type='text/javascript'>
+              $(function() {
+                const Toast = Swal.mixin({
+                  toast: true,
+                  position: 'top-end',
+                  showConfirmButton: false,
+                  timer: 3000
+                });
+            
+                  Toast.fire({
+                    type: 'error',
+                    title: 'Registration Failed.'
+                  })
+              
+              });
+            
+            </script>";
+              
+          
+			
+			    }else{
+
+           
+            echo "<script type='text/javascript'>
+                    $(function() {
+                        const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000
+                        });
+                    
+                        Toast.fire({
+                            type: 'success',
+                            title: ' Registration Successful',
+                        })
+                    
+                    });
+                    
+                    setInterval(() => {
+                      window.open('sign-in','_self');
+                    }, 2000);
+                    </script>";
+          }
+
+	//	}
+
+
+
+}
+
+
+?>
+<!doctype html>
 <html class="no-js " lang="en">
 
 <!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-up by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:08:06 GMT -->
@@ -74,7 +141,7 @@
     <div class="container">
         <div class="col-md-12 content-center">
             <div class="card-plain">
-                <form class="form" method="" action="#">
+                <form class="form" method="" action="sign-up" enctype="multipart/form-data">
                     <div class="header">
                         <div class="logo-container">
                             <img src="../assets/images/logo.svg" alt="">
@@ -84,25 +151,25 @@
                     </div>
                     <div class="content">                                                
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter User Name">
+                            <input type="text" name="fullname" class="form-control" placeholder="Enter Full Name">
                             <span class="input-group-addon">
                                 <i class="zmdi zmdi-account-circle"></i>
                             </span>
                         </div>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter Email">
+                            <input type="text" name="email" class="form-control" placeholder="Enter Email">
                             <span class="input-group-addon">
                                 <i class="zmdi zmdi-email"></i>
                             </span>
                         </div>
                         <div class="input-group">
-                            <input type="password" placeholder="Password" class="form-control" />
+                            <input type="password" name="password" placeholder="Password" class="form-control" />
                             <span class="input-group-addon">
                                 <i class="zmdi zmdi-lock"></i>
                             </span>
                         </div>
                         <div class="input-group">
-                            <input type="password" placeholder="Confirm Password" class="form-control" />
+                            <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control" />
                             <span class="input-group-addon">
                                 <i class="zmdi zmdi-lock"></i>
                             </span>
@@ -115,7 +182,7 @@
                             </label>
                         </div>
                     <div class="footer text-center">
-                        <a href="index" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">SIGN UP</a>
+                        <input type="submit" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light" value="SIGN UP">
                         <h6 class="m-t-20"><a class="link" href="sign-in">You already have a membership?</a></h6>
                     </div>
                 </form>
@@ -136,7 +203,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script>,
-                <span>Designed by <a href="https://thememakker.com/" target="_blank">ThemeMakker</a></span>
+                <!-- <span>Designed by <a href="https://thememakker.com/" target="_blank">ThemeMakker</a></span> -->
             </div>
         </div>
     </footer>
