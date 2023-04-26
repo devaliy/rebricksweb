@@ -1,4 +1,101 @@
-﻿<!doctype html>
+﻿<?php
+
+require('../config/init.php');
+
+
+if(isset($_POST['login']) && !empty($_POST['login'])){
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+	if(!empty($username) or !empty($password)){
+	        $login_det = $getFromGeneric->login('user', array('username' => $username, 'username' => $password));
+           
+            if(!$login_det){
+                echo "<script type='text/javascript'>
+              $(function() {
+                const Toast = Swal.mixin({
+                  toast: true,
+                  position: 'top-end',
+                  showConfirmButton: false,
+                  timer: 3000
+                });
+            
+                  Toast.fire({
+                    type: 'error',
+                    title: 'Invalid Username or Password.'
+                  })
+              
+              });
+            
+            </script>";
+              
+          
+			
+			    }else{
+
+            if($login_det->roles == 'a:0:{}'){
+              $_SESSION['id'] = $login_det->id;
+              $_SESSION['school_id'] = @$login_det->school_id;
+              $url = 'student/dashboard';
+             
+               }else{
+                $_SESSION['staff_id'] = $login_det->id;
+                $_SESSION['school_id'] = @$login_det->school_id;
+                $url = 'staff/dashboard';
+               
+                
+               }
+            echo "<script type='text/javascript'>
+                    $(function() {
+                        const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000
+                        });
+                    
+                        Toast.fire({
+                            type: 'success',
+                            title: ' Welcome to Eko Test Center',
+                        })
+                    
+                    });
+                    
+                    setInterval(() => {
+                      window.open('".BASE_URL.$url."','_self');
+                    }, 2000);
+                    </script>";
+          }
+
+	//	}
+
+
+
+	}else{
+        echo "<script type='text/javascript'>
+        $(function() {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+      
+            Toast.fire({
+              type: 'error',
+              title: '   Please Enter Username and Password.'
+            })
+         
+        });
+      
+      </script>";
+	
+	}
+}
+
+
+?>
+<!doctype html>
 <html class="no-js " lang="en">
 
 <!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:07:23 GMT -->
