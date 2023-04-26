@@ -22,10 +22,9 @@
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Property</span> </a>
                 <ul class="ml-menu">
                     <li><a href="property-list">Property List</a></li>
-                    <li><a href="property-list3">3 Column</a></li>
-                    <li><a href="property-list4">4 Column</a></li>                        
+                    <!-- <li><a href="property-list3">3 Column</a></li>                       -->
                     <li><a href="add-property">Add Property</a></li>
-                    <li><a href="property-detail">Property Detail</a></li>
+                    <!-- <li><a href="property-detail">Property Detail</a></li> -->
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Types</span> </a>
