@@ -141,7 +141,7 @@ if(isset($_POST['register']) && !empty($_POST['register'])){
     <div class="container">
         <div class="col-md-12 content-center">
             <div class="card-plain">
-                <form class="form" method="" action="sign-up" enctype="multipart/form-data">
+                <form class="form" method="post" action="sign-up" enctype="multipart/form-data">
                     <div class="header">
                         <div class="logo-container">
                             <img src="../assets/images/logo.svg" alt="">

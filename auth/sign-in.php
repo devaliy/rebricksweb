@@ -171,7 +171,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
     <div class="container">
         <div class="col-md-12 content-center">
             <div class="card-plain">
-                <form class="form" method="" action="sign-in" enctype="multipart/form-data">
+                <form class="form" method="post" action="sign-in" enctype="multipart/form-data">
                     <div class="header">
                         <div class="logo-container">
                             <img src="../assets/images/logo.svg" alt="">
