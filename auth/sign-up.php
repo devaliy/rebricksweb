@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/authentication.css">
     <link rel="stylesheet" href="../assets/css/color_skins.css">
+    
+   <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="../assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../assets/plugins/toastr/toastr.min.css">
 </head>
 
 <body class="theme-purple authentication sidebar-collapse">
@@ -140,6 +145,12 @@
 <!-- Jquery Core Js -->
 <script src="../assets/bundles/libscripts.bundle.js"></script>
 <script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
+
+<!-- SweetAlert2 -->
+<script src="../assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="../assets/plugins/toastr/toastr.min.js"></script>
+
 <script>
    $(".navbar-toggler").on('click',function() {
     $("html").toggleClass("nav-open");

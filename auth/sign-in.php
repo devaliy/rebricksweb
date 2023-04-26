@@ -113,6 +113,11 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/authentication.css">
     <link rel="stylesheet" href="../assets/css/color_skins.css">
+    
+   <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="../assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../assets/plugins/toastr/toastr.min.css">
 </head>
 
 <body class="theme-purple authentication sidebar-collapse">
@@ -166,7 +171,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
     <div class="container">
         <div class="col-md-12 content-center">
             <div class="card-plain">
-                <form class="form" method="" action="#">
+                <form class="form" method="" action="sign-in" enctype="multipart/form-data">
                     <div class="header">
                         <div class="logo-container">
                             <img src="../assets/images/logo.svg" alt="">
@@ -175,20 +180,20 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
                     </div>
                     <div class="content">                                                
                         <div class="input-group input-lg">
-                            <input type="text" class="form-control" placeholder="Enter User Name">
+                            <input type="email" name="email" class="form-control" placeholder="Enter Email">
                             <span class="input-group-addon">
                                 <i class="zmdi zmdi-account-circle"></i>
                             </span>
                         </div>
                         <div class="input-group input-lg">
-                            <input type="password" placeholder="Password" class="form-control" />
+                            <input type="password" placeholder="Password" name="password" class="form-control" />
                             <span class="input-group-addon">
                                 <i class="zmdi zmdi-lock"></i>
                             </span>
                         </div>
                     </div>
                     <div class="footer text-center">
-                        <a href="index" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">SIGN IN</a>
+                        <input type="submit" name="login" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light" value="SIGN IN">
                         <h6 class="m-t-20"><a href="forgot-password" class="link">Forgot Password?</a></h6>
                     </div>
                 </form>
@@ -209,7 +214,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
                 <script>
                     document.write(new Date().getFullYear())
                 </script>,
-                <span>Designed by <a href="https://thememakker.com/" target="_blank">ThemeMakker</a></span>
+                <!-- <span>Designed by <a href="https://thememakker.com/" target="_blank">ThemeMakker</a></span> -->
             </div>
         </div>
     </footer>
@@ -218,6 +223,11 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
 <!-- Jquery Core Js -->
 <script src="../assets/bundles/libscripts.bundle.js"></script>
 <script src="../assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+
+<!-- SweetAlert2 -->
+<script src="../assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="../assets/plugins/toastr/toastr.min.js"></script>
 
 <script>
    $(".navbar-toggler").on('click',function() {
