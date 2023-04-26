@@ -98,7 +98,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
 <!doctype html>
 <html class="no-js " lang="en">
 
-<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:07:23 GMT -->
+<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-in by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:07:23 GMT -->
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -130,7 +130,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
         <div class="navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Search Result</a>
@@ -154,7 +154,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
                     </a>
                 </li>                
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary btn-round" href="sign-up.html">SIGN UP</a>
+                    <a class="nav-link btn btn-primary btn-round" href="sign-up">SIGN UP</a>
                 </li>
             </ul>
         </div>
@@ -188,8 +188,8 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
                         </div>
                     </div>
                     <div class="footer text-center">
-                        <a href="index.html" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">SIGN IN</a>
-                        <h6 class="m-t-20"><a href="forgot-password.html" class="link">Forgot Password?</a></h6>
+                        <a href="index" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">SIGN IN</a>
+                        <h6 class="m-t-20"><a href="forgot-password" class="link">Forgot Password?</a></h6>
                     </div>
                 </form>
             </div>
@@ -232,5 +232,5 @@ $('.form-control').on("focus", function() {
 </script>
 </body>
 
-<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:07:24 GMT -->
+<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-in by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:07:24 GMT -->
 </html>

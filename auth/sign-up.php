@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html class="no-js " lang="en">
 
-<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:08:06 GMT -->
+<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-up by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:08:06 GMT -->
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -33,7 +33,7 @@
         <div class="navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Search Result</a>
@@ -57,7 +57,7 @@
                     </a>
                 </li>                
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary btn-round" href="sign-in.html">SIGN IN</a>
+                    <a class="nav-link btn btn-primary btn-round" href="sign-in">SIGN IN</a>
                 </li>
             </ul>
         </div>
@@ -110,8 +110,8 @@
                             </label>
                         </div>
                     <div class="footer text-center">
-                        <a href="index.html" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">SIGN UP</a>
-                        <h6 class="m-t-20"><a class="link" href="sign-in.html">You already have a membership?</a></h6>
+                        <a href="index" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">SIGN UP</a>
+                        <h6 class="m-t-20"><a class="link" href="sign-in">You already have a membership?</a></h6>
                     </div>
                 </form>
             </div>
@@ -147,5 +147,5 @@
 </script>
 </body>
 
-<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:08:06 GMT -->
+<!-- Mirrored from www.wrraptheme.com/templates/RedBricks/estate/sign-up by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Dec 2022 10:08:06 GMT -->
 </html>
