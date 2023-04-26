@@ -13,22 +13,7 @@ if(isset($_POST['register']) && !empty($_POST['register'])){
            
             if(!$register){
                 echo "<script type='text/javascript'>
-              $(function() {
-                const Toast = Swal.mixin({
-                  toast: true,
-                  position: 'top-end',
-                  showConfirmButton: false,
-                  timer: 3000
-                });
-            
-                  Toast.fire({
-                    type: 'error',
-                    title: 'Registration Failed.'
-                  })
-              
-              });
-            
-            </script>";
+            alert('Registration Failed.') </script>";
               
           
 			
@@ -36,25 +21,7 @@ if(isset($_POST['register']) && !empty($_POST['register'])){
 
            
             echo "<script type='text/javascript'>
-                    $(function() {
-                        const Toast = Swal.mixin({
-                        toast: true,
-                        position: 'top-end',
-                        showConfirmButton: false,
-                        timer: 3000
-                        });
-                    
-                        Toast.fire({
-                            type: 'success',
-                            title: ' Registration Successful',
-                        })
-                    
-                    });
-                    
-                    setInterval(() => {
-                      window.open('sign-in','_self');
-                    }, 2000);
-                    </script>";
+                   alert(' Registration Successful') </script>";
           }
 
 	//	}

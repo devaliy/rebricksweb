@@ -12,22 +12,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
            
             if(!$login_det){
                 echo "<script type='text/javascript'>
-              $(function() {
-                const Toast = Swal.mixin({
-                  toast: true,
-                  position: 'top-end',
-                  showConfirmButton: false,
-                  timer: 3000
-                });
-            
-                  Toast.fire({
-                    type: 'error',
-                    title: 'Invalid Username or Password.'
-                  })
-              
-              });
-            
-            </script>";
+           alert('Invalid Username or Password.') </script>";
               
           
 			
@@ -46,24 +31,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
                 
                }
             echo "<script type='text/javascript'>
-                    $(function() {
-                        const Toast = Swal.mixin({
-                        toast: true,
-                        position: 'top-end',
-                        showConfirmButton: false,
-                        timer: 3000
-                        });
-                    
-                        Toast.fire({
-                            type: 'success',
-                            title: ' Welcome to Eko Test Center',
-                        })
-                    
-                    });
-                    
-                    setInterval(() => {
-                      window.open('".BASE_URL.$url."','_self');
-                    }, 2000);
+                   alert(' Welcome to RedBricks')
                     </script>";
           }
 
@@ -73,21 +41,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
 
 	}else{
         echo "<script type='text/javascript'>
-        $(function() {
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000
-          });
-      
-            Toast.fire({
-              type: 'error',
-              title: '   Please Enter Username and Password.'
-            })
-         
-        });
-      
+     alert( '   Please Enter Username and Password.') 
       </script>";
 	
 	}
