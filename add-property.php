@@ -39,22 +39,23 @@ include('includes/sidebar.php');
                         <h2><strong>Basic</strong> Information <small>Description text here...</small> </h2>
                         
                     </div>
-                    <div class="body">
-                        <div class="row clearfix">
+                    <div class="body">                   
+                                       
+                    <div class="row clearfix  ">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" name="prop_name" class="form-control" placeholder="Property Name">
+                                    <input  required type="text" name="prop_name" class="form-control" placeholder="Property Name">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" name="prop_location" class="form-control" placeholder="Property Location">
+                                    <input  required type="text" name="prop_location" class="form-control" placeholder="Property Location">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <textarea rows="4" name="prop_desc" class="form-control no-resize" placeholder="Property Description"></textarea>
+                                        <textarea required  rows="4" name="prop_desc" class="form-control no-resize" placeholder="Property Description"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -70,44 +71,44 @@ include('includes/sidebar.php');
                         <div class="row clearfix">
                             <div class="col-sm-6">
                                 <div class="radio inlineblock m-r-25">
-                                    <input type="radio" name="prop_offer" id="radio1" value="option1" checked="">
+                                    <input  required type="radio" name="prop_offer" id="radio1" value="option1" checked="">
                                     <label for="radio1">For Rent</label>
                                 </div>
                                 <div class="radio inlineblock">
-                                    <input type="radio" name="prop_offer" id="radio2" value="option2">
+                                    <input  required type="radio" name="prop_offer" id="radio2" value="option2">
                                     <label for="radio2">For Sale</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" name="prop_amount" class="form-control" placeholder="Price / Rent">
+                                    <input  required type="text" name="prop_amount" class="form-control" placeholder="Price / Rent">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <textarea rows="4" name="prop_address" class="form-control no-resize" placeholder="Property Address"></textarea>
+                                    <textarea required  rows="4" name="prop_address" class="form-control no-resize" placeholder="Property Address"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" name="prop_bedroom" class="form-control" placeholder="Bedrooms">
+                                    <input  required type="text" name="prop_bedroom" class="form-control" placeholder="Bedrooms">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="prop_squareft"  placeholder="Square ft">
+                                    <input  required type="text" class="form-control" name="prop_squareft"  placeholder="Square ft">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="prop_car_park"  placeholder="Car Parking">
+                                    <input  required type="text" class="form-control" name="prop_car_park"  placeholder="Car Parking">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="prop_year_built"  placeholder="Year Built">
+                                    <input  required type="text" class="form-control" name="prop_year_built"  placeholder="Year Built">
                                 </div>
                             </div>
                         </div>                        
@@ -122,32 +123,32 @@ include('includes/sidebar.php');
                         <div class="row">
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
-                                    <input type="text" name="dining_room"  class="form-control" placeholder="Dining Room">
+                                    <input  required type="text" name="dining_room"  class="form-control" placeholder="Dining Room">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
-                                    <input type="text"  name="prop_kitchen"  class="form-control" placeholder="Kitchen">
+                                    <input  required type="text"  name="prop_kitchen"  class="form-control" placeholder="Kitchen">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
-                                    <input type="text"  name="prop_living_room"  class="form-control" placeholder="Living Room">
+                                    <input  required type="text"  name="prop_living_room"  class="form-control" placeholder="Living Room">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text"  name="prop_master_bedroom"  class="form-control" placeholder="Master Bedroom">
+                                    <input  required type="text"  name="prop_master_bedroom"  class="form-control" placeholder="Master Bedroom">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text"  name="prop_beedroom_2"  class="form-control" placeholder="Bedroom 2">
+                                    <input  required type="text"  name="prop_beedroom_2"  class="form-control" placeholder="Bedroom 2">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text"  name="prop_other_room"  class="form-control" placeholder="Other Room">
+                                    <input  required type="text"  name="prop_other_room"  class="form-control" placeholder="Other Room">
                                 </div>
                             </div>
                         </div>
@@ -162,51 +163,51 @@ include('includes/sidebar.php');
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox21"  name="prop_swimming_pool"  type="checkbox">
+                                    <input  required id="checkbox21"  name="prop_swimming_pool"  type="checkbox">
                                     <label for="checkbox21">Swimming pool</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox22"  name="prop_terrace"  type="checkbox">
+                                    <input  required id="checkbox22"  name="prop_terrace"  type="checkbox">
                                     <label for="checkbox22">Terrace</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox23" type="checkbox"  name="prop_air_conditioning"  checked="">
+                                    <input  required id="checkbox23" type="checkbox"  name="prop_air_conditioning"  checked="">
                                     <label for="checkbox23">Air conditioning</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox24" type="checkbox"  name="prop_internet"  checked="">
+                                    <input  required id="checkbox24" type="checkbox"  name="prop_internet"  checked="">
                                     <label for="checkbox24">Internet</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox25"  name="prop_balcony"  type="checkbox">
+                                    <input  required id="checkbox25"  name="prop_balcony"  type="checkbox">
                                     <label for="checkbox25">Balcony</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox26"  name="prop_cable_tv"  type="checkbox">
+                                    <input  required id="checkbox26"  name="prop_cable_tv"  type="checkbox">
                                     <label for="checkbox26">Cable TV</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox27"  name="prop_computer"  type="checkbox">
+                                    <input  required id="checkbox27"  name="prop_computer"  type="checkbox">
                                     <label for="checkbox27">Computer</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox28"  name="prop_dishwasher"  type="checkbox" checked="">
+                                    <input  required id="checkbox28"  name="prop_dishwasher"  type="checkbox" checked="">
                                     <label for="checkbox28">Dishwasher</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox29"  name="prop_near_green_zone"  type="checkbox" checked="">
+                                    <input  required id="checkbox29"  name="prop_near_green_zone"  type="checkbox" checked="">
                                     <label for="checkbox29">Near Green Zone</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox30"  name="prop_near_church"  type="checkbox">
+                                    <input  required id="checkbox30"  name="prop_near_church"  type="checkbox">
                                     <label for="checkbox30">Near Church</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox31"  name="prop_near_estate"  type="checkbox">
+                                    <input  required id="checkbox31"  name="prop_near_estate"  type="checkbox">
                                     <label for="checkbox31">Near Estate</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox32"  name="prop_coffe_shop"  type="checkbox">
+                                    <input  required id="checkbox32"  name="prop_coffe_shop"  type="checkbox">
                                     <label for="checkbox32">Cofee pot</label>
                                 </div>
                             </div>
@@ -238,7 +239,7 @@ include('includes/sidebar.php');
                                             <h3>Drop files here or click to upload.</h3>
                                             <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
                                         <div class="fallback">
-                                            <input name="file" type="file" multiple />
+                                            <input  required name="file" type="file" multiple />
                                         </div>
                                     </form>
                                 </div>
