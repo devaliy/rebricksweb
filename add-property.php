@@ -1,6 +1,7 @@
 ﻿
 
 <?php 
+require("config/init.php");
 include('includes/header.php');
 
 include('includes/sidebar.php');
@@ -32,96 +33,81 @@ include('includes/sidebar.php');
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-lg-12">
+                <form method="post" action="add-property" enctype="multipart/form-data">
                 <div class="card">
                     <div class="header">
                         <h2><strong>Basic</strong> Information <small>Description text here...</small> </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-more-vert"></i></a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Property Name">
+                                    <input type="text" name="prop_name" class="form-control" placeholder="Property Name">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Property Location">
+                                    <input type="text" name="prop_location" class="form-control" placeholder="Property Location">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <textarea rows="4" class="form-control no-resize" placeholder="Property Description"></textarea>
+                                        <textarea rows="4" name="prop_desc" class="form-control no-resize" placeholder="Property Description"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="card">
                     <div class="header">
                         <h2><strong>Property</strong> For <small>Description text here...</small> </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-more-vert"></i></a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <div class="body">
                         <div class="row clearfix">
                             <div class="col-sm-6">
                                 <div class="radio inlineblock m-r-25">
-                                    <input type="radio" name="radio1" id="radio1" value="option1" checked="">
+                                    <input type="radio" name="prop_offer" id="radio1" value="option1" checked="">
                                     <label for="radio1">For Rent</label>
                                 </div>
                                 <div class="radio inlineblock">
-                                    <input type="radio" name="radio1" id="radio2" value="option2">
+                                    <input type="radio" name="prop_offer" id="radio2" value="option2">
                                     <label for="radio2">For Sale</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Price / Rent">
+                                    <input type="text" name="prop_amount" class="form-control" placeholder="Price / Rent">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <textarea rows="4" class="form-control no-resize" placeholder="Property Address"></textarea>
+                                    <textarea rows="4" name="prop_address" class="form-control no-resize" placeholder="Property Address"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Bedrooms">
+                                    <input type="text" name="prop_bedroom" class="form-control" placeholder="Bedrooms">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Square ft">
+                                    <input type="text" class="form-control" name="prop_squareft"  placeholder="Square ft">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Car Parking">
+                                    <input type="text" class="form-control" name="prop_car_park"  placeholder="Car Parking">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Year Built">
+                                    <input type="text" class="form-control" name="prop_year_built"  placeholder="Year Built">
                                 </div>
                             </div>
                         </div>                        
@@ -130,46 +116,38 @@ include('includes/sidebar.php');
                 <div class="card">
                     <div class="header">
                         <h2><strong>Dimensions</strong> <small>Description text here...</small> </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-more-vert"></i></a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <div class="body">
                         <div class="row">
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" placeholder="Dining Room">
+                                    <input type="text" name="dining_room"  class="form-control" placeholder="Dining Room">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" placeholder="Kitchen">
+                                    <input type="text"  name="prop_kitchen"  class="form-control" placeholder="Kitchen">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" placeholder="Living Room">
+                                    <input type="text"  name="prop_living_room"  class="form-control" placeholder="Living Room">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Master Bedroom">
+                                    <input type="text"  name="prop_master_bedroom"  class="form-control" placeholder="Master Bedroom">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Bedroom 2">
+                                    <input type="text"  name="prop_beedroom_2"  class="form-control" placeholder="Bedroom 2">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Other Room">
+                                    <input type="text"  name="prop_other_room"  class="form-control" placeholder="Other Room">
                                 </div>
                             </div>
                         </div>
@@ -178,88 +156,100 @@ include('includes/sidebar.php');
                 <div class="card">
                     <div class="header">
                         <h2><strong>General</strong> Amenities<small>Description text here...</small> </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-more-vert"></i></a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-                                    <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </div>
                     <div class="body">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox21" type="checkbox">
+                                    <input id="checkbox21"  name="prop_swimming_pool"  type="checkbox">
                                     <label for="checkbox21">Swimming pool</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox22" type="checkbox">
+                                    <input id="checkbox22"  name="prop_terrace"  type="checkbox">
                                     <label for="checkbox22">Terrace</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox23" type="checkbox" checked="">
+                                    <input id="checkbox23" type="checkbox"  name="prop_air_conditioning"  checked="">
                                     <label for="checkbox23">Air conditioning</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox24" type="checkbox" checked="">
+                                    <input id="checkbox24" type="checkbox"  name="prop_internet"  checked="">
                                     <label for="checkbox24">Internet</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox25" type="checkbox">
+                                    <input id="checkbox25"  name="prop_balcony"  type="checkbox">
                                     <label for="checkbox25">Balcony</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox26" type="checkbox">
+                                    <input id="checkbox26"  name="prop_cable_tv"  type="checkbox">
                                     <label for="checkbox26">Cable TV</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox27" type="checkbox">
+                                    <input id="checkbox27"  name="prop_computer"  type="checkbox">
                                     <label for="checkbox27">Computer</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox28" type="checkbox" checked="">
+                                    <input id="checkbox28"  name="prop_dishwasher"  type="checkbox" checked="">
                                     <label for="checkbox28">Dishwasher</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox29" type="checkbox" checked="">
+                                    <input id="checkbox29"  name="prop_near_green_zone"  type="checkbox" checked="">
                                     <label for="checkbox29">Near Green Zone</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox30" type="checkbox">
+                                    <input id="checkbox30"  name="prop_near_church"  type="checkbox">
                                     <label for="checkbox30">Near Church</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox31" type="checkbox">
+                                    <input id="checkbox31"  name="prop_near_estate"  type="checkbox">
                                     <label for="checkbox31">Near Estate</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input id="checkbox32" type="checkbox">
+                                    <input id="checkbox32"  name="prop_coffe_shop"  type="checkbox">
                                     <label for="checkbox32">Cofee pot</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row clearfix">                            
-                            <div class="col-sm-12">
-                                <form action="" id="frmFileUpload" class="dropzone m-b-15 m-t-15" method="post" enctype="multipart/form-data">
-                                    <div class="dz-message">
-                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
-                                        <h3>Drop files here or click to upload.</h3>
-                                        <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary btn-round">Submit</button>
-                                <button type="submit" class="btn btn-default btn-round btn-simple">Cancel</button>
-                            </div>
-                        </div>
+
+                        <div class="col-sm-12">
+                                    <button type="submit" name="register" class="btn btn-primary btn-round">Submit</button>
+                                    <button type="submit" class="btn btn-default btn-round btn-simple">Cancel</button>
+                                </div>
+                       
                     </div>
                 </div>
+
+                </form>
+
+                
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Basic</strong> Information <small>Description text here...</small> </h2>
+                        
+                    </div>
+                        <div class="body">
+                        
+                            <div class="row clearfix">                            
+                                <div class="col-sm-12">
+                                    <form action="" id="frmFileUpload" class="dropzone m-b-15 m-t-15" method="post" enctype="multipart/form-data">
+                                        <div class="dz-message">
+                                            <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
+                                            <h3>Drop files here or click to upload.</h3>
+                                            <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
+                                        <div class="fallback">
+                                            <input name="file" type="file" multiple />
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-primary btn-round">Submit</button>
+                                    <button type="submit" class="btn btn-default btn-round btn-simple">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                    
             </div>
         </div>
     </div>
@@ -267,5 +257,50 @@ include('includes/sidebar.php');
 
 
 <?php 
-include('includes/footer.php')
+include('includes/footer.php');
+
+if(isset($_POST['register'])){
+    $prop_name = $_POST['prop_name'];
+    $prop_swimming_pool = $_POST['prop_swimming_pool'];
+    $prop_terrace = $_POST['prop_terrace'];
+    $prop_air_conditioning = $_POST['prop_air_conditioning'];
+    $prop_internet = $_POST['prop_internet'];
+    $prop_balcony = $_POST['prop_balcony'];
+    $prop_cable_tv = $_POST['prop_cable_tv'];
+    $prop_computer = $_POST['prop_computer'];
+    $prop_dishwasher = $_POST['prop_dishwasher'];
+    $prop_near_green_zone = $_POST['prop_near_green_zone'];
+    $prop_near_church = $_POST['prop_near_church'];
+    $prop_near_estate = $_POST['prop_near_estate'];
+    $prop_coffe_shop = $_POST['prop_coffe_shop'];
+    $dining_room = $_POST['dining_room'];
+    $prop_kitchen = $_POST['prop_kitchen'];
+    $prop_living_room = $_POST['prop_living_room'];
+    $prop_master_bedroom = $_POST['prop_master_bedroom'];
+    $prop_beedroom_2 = $_POST['prop_beedroom_2'];
+    $prop_other_room = $_POST['prop_other_room'];
+    $prop_year_built = $_POST['prop_year_built'];
+    $prop_car_park = $_POST['prop_car_park'];
+    $prop_squareft = $_POST['prop_squareft'];
+    $prop_bedroom = $_POST['prop_bedroom'];
+    $prop_address = $_POST['prop_address'];
+    $prop_amount = $_POST['prop_amount'];
+    $prop_offer = $_POST['prop_offer'];
+    $prop_desc = $_POST['prop_desc'];
+    $prop_location = $_POST['prop_location'];
+
+
+    $create = $getFromGeneric->create('property', array('prop_name'=>$prop_name,'prop_swimming_pool'=>$prop_swimming_pool,'prop_terrace'=>$prop_terrace,'prop_air_conditioning'=>$prop_air_conditioning,'prop_internet'=>$prop_internet,'prop_balcony'=>$prop_balcony,'prop_cable_tv'=>$prop_cable_tv,'prop_computer'=>$prop_computer,'prop_dishwasher'=>$prop_dishwasher,'prop_living_room'=>$prop_living_room,'prop_kitchen'=>$prop_kitchen,'dining_room'=>$dining_room,'prop_coffe_shop'=>$prop_coffe_shop,'prop_other_room'=>$prop_other_room,'prop_beedroom_2'=>$prop_beedroom_2,'prop_master_bedroom'=>$prop_master_bedroom,'prop_near_estate'=>$prop_near_estate,'prop_squareft'=>$prop_squareft,'prop_car_park'=>$prop_car_park,'prop_year_built'=>$prop_year_built,'prop_near_green_zone'=>$prop_near_green_zone,'prop_amount'=>$prop_amount,'prop_address'=>$prop_address,'prop_bedroom'=>$prop_bedroom,'prop_near_church'=>$prop_near_church,'prop_offer'=>$prop_offer,'prop_desc'=>$prop_desc,'prop_location'=>$prop_location ));
+
+    if($create){
+        echo '<script>alert("Property Created Successfully")</script>';
+        echo '<script>
+            window.location.assign("add-property?id="'.$create.');
+        </script>';
+        
+    }
+    
+}
+
+                           
 ?>
