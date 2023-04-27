@@ -71,11 +71,11 @@ include('includes/sidebar.php');
                         <div class="row clearfix">
                             <div class="col-sm-6">
                                 <div class="radio inlineblock m-r-25">
-                                    <input  required type="radio" name="prop_offer" id="radio1" value="option1" checked="">
+                                    <input  required type="radio" name="prop_offer" id="radio1" value="rent" checked="">
                                     <label for="radio1">For Rent</label>
                                 </div>
                                 <div class="radio inlineblock">
-                                    <input  required type="radio" name="prop_offer" id="radio2" value="option2">
+                                    <input  required type="radio" name="prop_offer" id="radio2" value="sale">
                                     <label for="radio2">For Sale</label>
                                 </div>
                             </div>
