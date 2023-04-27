@@ -294,10 +294,32 @@ if(isset($_POST['register'])){
     $create = $getFromGeneric->create('property', array('prop_name'=>$prop_name,'prop_swimming_pool'=>$prop_swimming_pool,'prop_terrace'=>$prop_terrace,'prop_air_conditioning'=>$prop_air_conditioning,'prop_internet'=>$prop_internet,'prop_balcony'=>$prop_balcony,'prop_cable_tv'=>$prop_cable_tv,'prop_computer'=>$prop_computer,'prop_dishwasher'=>$prop_dishwasher,'prop_living_room'=>$prop_living_room,'prop_kitchen'=>$prop_kitchen,'dining_room'=>$dining_room,'prop_coffe_shop'=>$prop_coffe_shop,'prop_other_room'=>$prop_other_room,'prop_beedroom_2'=>$prop_beedroom_2,'prop_master_bedroom'=>$prop_master_bedroom,'prop_near_estate'=>$prop_near_estate,'prop_squareft'=>$prop_squareft,'prop_car_park'=>$prop_car_park,'prop_year_built'=>$prop_year_built,'prop_near_green_zone'=>$prop_near_green_zone,'prop_amount'=>$prop_amount,'prop_address'=>$prop_address,'prop_bedroom'=>$prop_bedroom,'prop_near_church'=>$prop_near_church,'prop_offer'=>$prop_offer,'prop_desc'=>$prop_desc,'prop_location'=>$prop_location ));
 
     if($create){
-        echo '<script>alert("Property Created Successfully")</script>';
-        echo '<script>
-            window.location.assign("add-property?id="'.$create.');
-        </script>';
+        echo "<script type='text/javascript'>
+        $(function() {
+            const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+            });
+        
+            Toast.fire({
+                type: 'success',
+                title: 'Property Created Successfully',
+            })
+        
+        });
+        
+        setInterval(() => {
+            window.location.assign('add-property?id=".$create."','_self');
+        }, 2000);
+        </script>";
+
+
+        // echo '<script>alert("Property Created Successfully")</script>';
+        // echo '<script>
+        //     window.location.assign("add-property?id="'.$create.');
+        // </script>';
         
     }
     
