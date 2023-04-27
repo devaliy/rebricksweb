@@ -163,51 +163,51 @@ include('includes/sidebar.php');
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox21"  name="prop_swimming_pool"  type="checkbox">
+                                    <input   id="checkbox21"  name="prop_swimming_pool"  type="checkbox">
                                     <label for="checkbox21">Swimming pool</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox22"  name="prop_terrace"  type="checkbox">
+                                    <input   id="checkbox22"  name="prop_terrace"  type="checkbox">
                                     <label for="checkbox22">Terrace</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox23" type="checkbox"  name="prop_air_conditioning"  checked="">
+                                    <input   id="checkbox23" type="checkbox"  name="prop_air_conditioning"  checked="">
                                     <label for="checkbox23">Air conditioning</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox24" type="checkbox"  name="prop_internet"  checked="">
+                                    <input   id="checkbox24" type="checkbox"  name="prop_internet"  checked="">
                                     <label for="checkbox24">Internet</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox25"  name="prop_balcony"  type="checkbox">
+                                    <input   id="checkbox25"  name="prop_balcony"  type="checkbox">
                                     <label for="checkbox25">Balcony</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox26"  name="prop_cable_tv"  type="checkbox">
+                                    <input   id="checkbox26"  name="prop_cable_tv"  type="checkbox">
                                     <label for="checkbox26">Cable TV</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox27"  name="prop_computer"  type="checkbox">
+                                    <input   id="checkbox27"  name="prop_computer"  type="checkbox">
                                     <label for="checkbox27">Computer</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox28"  name="prop_dishwasher"  type="checkbox" checked="">
+                                    <input   id="checkbox28"  name="prop_dishwasher"  type="checkbox" checked="">
                                     <label for="checkbox28">Dishwasher</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox29"  name="prop_near_green_zone"  type="checkbox" checked="">
+                                    <input   id="checkbox29"  name="prop_near_green_zone"  type="checkbox" checked="">
                                     <label for="checkbox29">Near Green Zone</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox30"  name="prop_near_church"  type="checkbox">
+                                    <input   id="checkbox30"  name="prop_near_church"  type="checkbox">
                                     <label for="checkbox30">Near Church</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox31"  name="prop_near_estate"  type="checkbox">
+                                    <input   id="checkbox31"  name="prop_near_estate"  type="checkbox">
                                     <label for="checkbox31">Near Estate</label>
                                 </div>
                                 <div class="checkbox inlineblock m-r-20">
-                                    <input  required id="checkbox32"  name="prop_coffe_shop"  type="checkbox">
+                                    <input   id="checkbox32"  name="prop_coffe_shop"  type="checkbox">
                                     <label for="checkbox32">Cofee pot</label>
                                 </div>
                             </div>
