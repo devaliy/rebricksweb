@@ -216,7 +216,7 @@
         if(in_array($ext, $allowed_ext) === false){
             if($error === 0){
               //  if($fileSize <= 209272152){
-                        $fileRoot ='../assets/images/'. $original;
+                        $fileRoot ='../assets/property_img/'. $original;
                         $fileRoots =  $original;
                         move_uploaded_file($fileTmp, $fileRoot);
                         return $fileRoots;

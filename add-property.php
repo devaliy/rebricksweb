@@ -23,7 +23,7 @@ include('includes/sidebar.php');
                     <i class="zmdi zmdi-plus"></i>
                 </button>
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Compass</a></li>
+                    <li class="breadcrumb-item"><a href="index"><i class="zmdi zmdi-home"></i> Compass</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Property</a></li>
                     <li class="breadcrumb-item active">Add Property</li>
                 </ul>                
@@ -230,24 +230,37 @@ include('includes/sidebar.php');
                         
                     </div>
                         <div class="body">
-                        
-                            <div class="row clearfix">                            
-                                <div class="col-sm-12">
-                                    <form action="" id="frmFileUpload" class="dropzone m-b-15 m-t-15" method="post" enctype="multipart/form-data">
-                                        <div class="dz-message">
-                                            <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
-                                            <h3>Drop files here or click to upload.</h3>
-                                            <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
-                                        <div class="fallback">
-                                            <input  required name="file" type="file" multiple />
+                            <form action="add-property?id=<?=$_GET['id']?>" id="frmFileUpload" class="dropzone m-b-15 m-t-15" method="post" enctype="multipart/form-data">                           
+                               
+                                <div class="row clearfix"> 
+                                        <div class="col-sm-12">
+                                        
+                                              <div class="row">
+                                              <?php
+                                              
+                                                $imgs =   $getFromGeneric->get_multi('images', array('property_id'=>$_GET['id']), 'id', 'desc');
+                                                foreach($imgs as $img):
+                                              ?>
+                                              <div class="col-md-3">
+                                                <img src="<?=$img->image_url?>">
+                                              </div>
+
+                                              <?php endforeach ?>
+                                              </div>
+                                                <div class="fallback">
+                                                <input type="file" name="image" class="form-control" placeholder="Property Image" required>
+                                                    <!-- <input  required name="image" type="file" multiple /> -->
+                                                    <input type="hidden" name="prop_id" value="<?=$_GET['id']?>" >
+                                                </div>
+                                        
                                         </div>
-                                    </form>
+                                        <div class="col-sm-12">
+                                            <button type="submit" name="upload_image" class="btn btn-primary btn-round">Add Image</button>
+                                            <button type="submit" class="btn btn-default btn-round btn-simple">Cancel</button>
+                                        </div>
+                                
                                 </div>
-                                <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-primary btn-round">Submit</button>
-                                    <button type="submit" class="btn btn-default btn-round btn-simple">Cancel</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                 </div>
                     
@@ -321,6 +334,96 @@ if(isset($_POST['register'])){
         //     window.location.assign("add-property?id="'.$create.');
         // </script>';
         
+    }else{
+        echo "<script type='text/javascript'>
+        $(function() {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+      
+            Toast.fire({
+              type: 'error',
+              title: 'Failed to Create Property Try again.'
+            })
+        
+        });
+      
+      </script>";
+    }
+    
+}
+
+
+
+
+
+if(isset($_POST['upload_image'])){
+    $prop_id = $_POST['prop_id'];
+    $file = $_FILES["image"];
+    $filename = $file["name"];
+    $tmp_name = $file["tmp_name"];
+    $original = mt_rand(1111, 9999).$filename;
+
+
+
+   $image_url = 'assets/property_img/'.$original;  
+    
+  move_uploaded_file($tmp_name, "assets/property_img/" . $original);     
+ 
+   //$image_url = $getFromGeneric->uploadImage($filename);
+
+
+    $create = $getFromGeneric->create('images', array('property_id'=>$prop_id,'image_url'=>$image_url ));
+
+    if($create){
+        echo "<script type='text/javascript'>
+        $(function() {
+            const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+            });
+        
+            Toast.fire({
+                type: 'success',
+                title: 'Image Added Successfully',
+            })
+        
+        });
+        
+        setInterval(() => {
+            window.location.assign('add-property?id=".$prop_id."','_self')
+        }, 2000);
+        </script>";
+
+
+        // echo '<script>alert("Property Created Successfully")</script>';
+        // echo '<script>
+        //     window.location.assign("add-property?id="'.$create.');
+        // </script>';
+        
+    }else{
+        echo "<script type='text/javascript'>
+        $(function() {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+      
+            Toast.fire({
+              type: 'error',
+              title: 'Failed to Add Image Try again.'
+            })
+        
+        });
+      
+      </script>";
     }
     
 }
