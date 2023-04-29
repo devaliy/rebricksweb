@@ -1,11 +1,11 @@
 <?php
-    $servername = "mysql:host=localhost; dbname=redbrick";
-    $username = "root";
-    $password = "";
+    // $servername = "mysql:host=localhost; dbname=redbrick";
+    // $username = "root";
+    // $password = "";
 
-    //  $servername = "mysql:host=localhost; dbname=farmasng_redbricks";
-    // $username = "farmasng_ali";
-    // $password = "FuTa@(2017)";
+     $servername = "mysql:host=localhost; dbname=farmasng_redbricks";
+    $username = "farmasng_ali";
+    $password = "FuTa@(2017)";
     
     try{
 
