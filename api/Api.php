@@ -77,10 +77,10 @@
           
                
                 $query = new Query;
-                $register = $query->create('register', array('fullname'=>$fullname, 'password'=>$password, 'email'=>$email,  'phone'=>$phone));
+                $register = $query->create('user', array('fullname'=>$fullname, 'password'=>md5($password), 'email'=>$email,  'phone'=>$phone));
                 if($register){
                     $message = 'User Created Successfully';
-                    $this->returnResponse(SUCCESS_RESPONSE, $register);
+                    $this->returnResponse(SUCCESS_RESPONSE, $message);
                 }else{
                     $message = 'Failed to Create User';
                     $this->returnResponse(FAILED_RESPONSE, $message);

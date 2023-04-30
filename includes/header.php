@@ -1,3 +1,8 @@
+<?php 
+    require_once('config/init.php');
+
+?>
+
 <!doctype html>
 <html class="no-js " lang="en">
 
