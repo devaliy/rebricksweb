@@ -381,7 +381,7 @@ if(isset($_POST['upload_image'])){
 
     if($create){
         $img = $getFromGeneric->get_single('images', array('id'=>$create), 'id', 'desc');
-        $update = $getFromGeneric->update("property", 'id', $_GET['id'], array('image_id'=>$img->image_url));
+        $update = $getFromGeneric->update("property", 'id', $_GET['id'], array('image_url'=>$img->image_url));
         if($update){
             echo "<script type='text/javascript'>
             $(function() {
