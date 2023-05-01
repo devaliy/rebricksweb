@@ -17,57 +17,8 @@
 
             
 
-        }
-        
+        }    
   
-
-           
-        // public function activate() {
-        //     $act_code = $this->validateParameter('act_code', $this->param['act_code'], STRING, false);
-            
-        //     $student_id = $this->validateParameter('student_id', $this->param['student_id'], STRING, false);
-           
-         
-        //     $query = new Query;
-        //     try {
-                    
-        //             $results = $query->get_single('activation_code', array('activation_code' =>$act_code), 'id','desc');
-
-        //           if($results){
-        //             $days = $results->months * 30;
-                   
-                 
-                 
-        //             if(($results->used) < ($results->num_user)){
-        //                 $edit =  $query->update_act($days, $results->id);
-
-        //                 if($edit){
-        //                     $data = ['results' => $results];
-        //                     $this->returnResponse(SUCCESS_RESPONSE, $data); 
-    
-        //                 }else{
-        //                     $this->returnResponse(FAILED_RESPONSE, "Error Please Try Again.");
-        //                 }
-        //             }else{
-        //                 $this->returnResponse(FAILED_RESPONSE, "This Activation Code has been Used.");
-                      
-        //               }
-
-                   
-        //           }else{
-        //             $this->returnResponse(FAILED_RESPONSE, "Invalid Activation Code.");
-        //           }
-                             
-                    
-                
-               
-        //     } catch (Exception $e){
-        //         $this->throwError(FAILED_RESPONSE, $e->getMessage());
-        //     }
-        // }
-     
-
-           
 
         public function register() {
             $fullname = $this->validateParameter('fullname', $this->param['fullname'], STRING, false);
@@ -85,37 +36,128 @@
                     $message = 'Failed to Create User';
                     $this->returnResponse(FAILED_RESPONSE, $message);
                 }
-           //     $this->returnResponse(SUCCESS_RESPONSE, $message);
-           
+                  
         }
-        // public function school() {
-        //     $school_name = $this->validateParameter('school_name', $this->param['schoolname'], STRING, false);
-        //     $fullname = $this->validateParameter('fullname', $this->param['fullname'], STRING, false);
-        //     $email = $this->validateParameter('email', $this->param['email'], STRING, false);
-        //     $phone = $this->validateParameter('phone', $this->param['phone'], STRING, false);       
-        //     $class = $this->validateParameter('class', $this->param['class'], STRING, false);
-          
-               
-        //         $query = new Query;
-        //         $student = $query->create('student', array('fullname'=>$fullname, 'class'=>$class, 'school_name'=>$school_name));
-        //         if($student){
-        //            $school=  $query->create('school_reg', array('school_name'=>$school_name, 'student_id'=>$student, 'email'=>$email,  'phone'=>$phone));
 
-        //            if($school){
-        //             $message = 'User Created Successfully';
-        //             $this->returnResponse(SUCCESS_RESPONSE, $student);
-        //            }
-
-                   
-        //         }else{
-        //             $message = 'Failed to Create User';
-        //             $this->returnResponse(FAILED_RESPONSE, $message);
-        //         }
-               
+        public function addToCart() {
+            $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);
+            $cust_id = $this->validateParameter('cust_id', $this->param['cust_id'], INTEGER, false);
            
-        // }
+               
+                $query = new Query;
+                $register = $query->create('cart', array('prop_id'=>$prop_id, 'cust_id'=>$cust_id));
+                if($register){
+                    $message = 'Cart Added Successfully';
+                    $this->returnResponse(SUCCESS_RESPONSE, $message);
+                }else{
+                    $message = 'Failed to Create Cart';
+                    $this->returnResponse(FAILED_RESPONSE, $message);
+                }
+                  
+        }
+
+        public function properties() {
+              
+            $query = new Query;
+            $property = $query->get_property();
+            if($property){
+               // $message = 'User Created Successfully';
+                $this->returnResponse(SUCCESS_RESPONSE, $property);
+            }else{
+               // $message = 'Failed to Create User';
+                $this->returnResponse(FAILED_RESPONSE, $property);
+            }
+              
+    }
+    public function carts() {
+          
+            $query = new Query;
+            $cart = $query->get_cart();
+            if($cart){
+               // $message = 'User Created Successfully';
+                $this->returnResponse(SUCCESS_RESPONSE, $cart);
+            }else{
+               // $message = 'Failed to Create User';
+                $this->returnResponse(FAILED_RESPONSE, $cart);
+            }
+              
+    }
+
+    public function cartAmount() {
+          
+        $query = new Query;
+        $cart = $query->get_cart_amt();
+        if($cart){
+           // $message = 'User Created Successfully';
+            $this->returnResponse(SUCCESS_RESPONSE, $cart);
+        }else{
+           // $message = 'Failed to Create User';
+            $this->returnResponse(FAILED_RESPONSE, $cart);
+        }
+          
+}
+
+    public function property() {
+        $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
+        
+            $query = new Query;
+            $property = $query->get_single('images', array('property_id'=>$prop_id),'id', 'asc');
+            if($property){
+            // $message = 'User Created Successfully';
+                $this->returnResponse(SUCCESS_RESPONSE, $property);
+            }else{
+            // $message = 'Failed to Create User';
+                $this->returnResponse(FAILED_RESPONSE, $property);
+            }
+            
+    }
+
+    public function propById() {
+        $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
+        
+            $query = new Query;
+            $property = $query->get_single('property', array('id'=>$prop_id),'id', 'asc');
+            if($property){
+            // $message = 'User Created Successfully';
+                $this->returnResponse(SUCCESS_RESPONSE, $property);
+            }else{
+            // $message = 'Failed to Create User';
+                $this->returnResponse(FAILED_RESPONSE, $property);
+            }
+            
+    }
+   public  function searchProperty() {
+        $term = $this->validateParameter('term', $this->param['term'], STRING, false);           
+        
+            $query = new Query;
+            $property = $query->search_property($term);
+            if($property){
+            // $message = 'User Created Successfully';
+                $this->returnResponse(SUCCESS_RESPONSE, $property);
+            }else{
+            // $message = 'Failed to Create User';
+                $this->returnResponse(FAILED_RESPONSE, $property);
+            }
+            
+    }
 
 
+
+
+    public function propImageById() {
+        $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
+        
+            $query = new Query;
+            $property = $query->get_multi('images', array('property_id'=>$prop_id),'id', 'asc');
+            if($property){
+            // $message = 'User Created Successfully';
+                $this->returnResponse(SUCCESS_RESPONSE, $property);
+            }else{
+            // $message = 'Failed to Create User';
+                $this->returnResponse(FAILED_RESPONSE, $property);
+            }
+            
+    }
 
 
     }

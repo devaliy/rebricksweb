@@ -109,6 +109,45 @@ class  Query {
         }
 
     
+        public function get_property()
+        {
+            $stmt = $this->pdo->prepare("SELECT property.*, images.image_url FROM property JOIN images ON property.id =images.property_id  ORDER BY images.id asc");
+            $stmt->execute();
+            $multi = $stmt->fetchAll(PDO::FETCH_OBJ);
+        
+            return $multi;
+        }
+
+    
+    
+        public function search_property($term)
+        {
+            $stmt = $this->pdo->prepare("SELECT property.*, images.image_url FROM property JOIN images ON property.id =images.property_id WHERE property.prop_name LIKE '%$term%' OR  property.prop_desc LIKE '%$term%' OR  property.prop_address OR  property.prop_location LIKE '%$term%'  ORDER BY property.id desc");
+            $stmt->execute();
+            $multi = $stmt->fetchAll(PDO::FETCH_OBJ);
+        
+            return $multi;
+        }
+
+    
+        public function get_cart()
+        {
+            $stmt = $this->pdo->prepare("SELECT property.prop_name, property.prop_amount, property.prop_address, images.image_url FROM cart JOIN property ON cart.prop_id =property.id  JOIN images ON property.image_id =images.id    ORDER BY images.id asc");
+            $stmt->execute();
+            $multi = $stmt->fetchAll(PDO::FETCH_OBJ);
+        
+            return $multi;
+        }
+        public function get_cart_amt()
+        {
+            $stmt = $this->pdo->prepare("SELECT  SUM( property.prop_amount) as total_amount FROM cart JOIN property ON cart.prop_id =property.id  JOIN images ON property.image_id =images.id    ORDER BY images.id asc");
+            $stmt->execute();
+            $multi = $stmt->fetch(PDO::FETCH_OBJ);
+        
+            return $multi;
+        }
+
+    
     
      
         public function login($table, $fields = array())

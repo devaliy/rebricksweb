@@ -91,20 +91,20 @@
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358; <?=$get_prop->prop_amount?></h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
-                                <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey"> <?=$get_prop->prop_address?></a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i> <?=$get_prop->prop_location?></p>
+                                <p class="text-muted m-b-0"> <?=$get_prop->prop_desc?></p>
                             </div>
                             <div class="property-action m-t-15">
-                                <a href="#" title="Square Feet"><i class="zmdi zmdi-view-dashboard"></i><span>280</span></a>
-                                <a href="#" title="Bedroom"><i class="zmdi zmdi-hotel"></i><span>4</span></a>
-                                <a href="#" title="Parking space"><i class="zmdi zmdi-car-taxi"></i><span>2</span></a>
-                                <a href="#" title="Garages"><i class="zmdi zmdi-home"></i><span> 24H</span></a>
+                                <a href="#" title="Square Feet"><i class="zmdi zmdi-view-dashboard"></i><span> <?=$get_prop->prop_squareft?></span></a>
+                                <a href="#" title="Bedroom"><i class="zmdi zmdi-hotel"></i><span> <?=$get_prop->prop_bedroom?></span></a>
+                                <a href="#" title="Parking space"><i class="zmdi zmdi-car-taxi"></i><span> <?=$get_prop->prop_car_park?></span></a>
+                                <!-- <a href="#" title="Garages"><i class="zmdi zmdi-home"></i><span> 24H</span></a> -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <!-- <div class="card">
                     <div class="header">
                         <h2><strong>General</strong> Amenities<small >Description Text Here...</small></h2>
                         <ul class="header-dropdown">
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="card">
                     <div class="header">
                         <h2><strong>Location</strong> <small>Description text here...</small> </h2>
@@ -171,7 +171,7 @@
             <div class="col-lg-4 col-md-12">
                 <div class="card member-card">
                     <div class="header l-parpl">
-                        <h4 class="m-t-10">Eliana Smith</h4>
+                        <h4 class="m-t-10">Aliy Adedigba</h4>
                     </div>
                     <div class="member-img">
                         <a href="profile"><img src="assets/images/lg/avatar2.jpg" class="rounded-circle" alt="profile-image"></a>
@@ -183,21 +183,21 @@
                                 <li><a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a></li>
                                 <li><a title="instagram" href="#"><i class="zmdi zmdi-instagram"></i></a></li>
                             </ul>
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                            <p class="text-muted">Block 32, Flat 4, LSDPC Estate Ebute Metta, Lagos </p>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-4">
                                 <h5>18</h5>
-                                <small>Files</small>
+                                <small>Property</small>
                             </div>
                             <div class="col-4">
-                                <h5>2GB</h5>
-                                <small>Used</small>
+                                <h5>2</h5>
+                                <small>Rent</small>
                             </div>
                             <div class="col-4">
-                                <h5>65,6$</h5>
-                                <small>Spent</small>
+                                <h5>65</h5>
+                                <small>Sale</small>
                             </div>
                         </div>
                     </div>
@@ -257,35 +257,35 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">Price:</th>
-                                        <td>$390,000</td>
+                                        <td>&#8358; <?=number_format($get_prop->prop_amount, 2)?></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Contract type: </th>
-                                        <td><span class="badge badge-primary">For Sale</span></td>
+                                        <td><span class="badge badge-primary">For  <?=$get_prop->prop_offer?></span></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Bathrooms:</th>
-                                        <td>1.5</td>
+                                        <td> <?=$get_prop->prop_bedroom?></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Square ft:</th>
-                                        <td>468</td>
+                                        <td> <?=$get_prop->prop_squareft?></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Garage Spaces:</th>
-                                        <td>2</td>
+                                        <th scope="row">Swimming Pool:</th>
+                                        <td> <?=$get_prop->prop_swimming_pool?></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Land Size:</th>
-                                        <td>721 m²</td>
+                                        <th scope="row">Internet:</th>
+                                        <td> <?=$get_prop->prop_internet?></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Floors:</th>
-                                        <td>2</td>
+                                        <th scope="row">Balcony:</th>
+                                        <td> <?=$get_prop->prop_balcony?></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Listed for:</th>
-                                        <td>15 days</td>
+                                        <th scope="row">Year Built:</th>
+                                        <td> <?=$get_prop->prop_year_built?></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Available:</th>
@@ -296,8 +296,8 @@
                                         <td>Pets Allowed</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Bedrooms:</th>
-                                        <td>3</td>
+                                        <th scope="row">Master Bedrooms:</th>
+                                        <td> <?=$get_prop->prop_master_bedroom?></td>
                                     </tr>
                                 </tbody>
                             </table>
