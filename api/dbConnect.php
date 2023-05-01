@@ -5,8 +5,8 @@
 
      class DbConnect {
         private $server = 'localhost';
-        private $dbname = 'farmasng_redbricks';
-        private $user = 'farmasng_ali';
+        private $dbname = 'tadsengi_redbricks';
+        private $user = 'tadsengi_ali';
         private $pass = 'FuTa@(2017)';
 
         // private $server = 'localhost';
