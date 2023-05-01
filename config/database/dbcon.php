@@ -3,8 +3,8 @@
     // $username = "root";
     // $password = "";
 
-     $servername = "mysql:host=localhost; dbname=farmasng_redbricks";
-    $username = "farmasng_ali";
+     $servername = "mysql:host=localhost; dbname=tadsengi_redbricks";
+    $username = "tadsengi_ali";
     $password = "FuTa@(2017)";
     
     try{
