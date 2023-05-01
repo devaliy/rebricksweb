@@ -39,6 +39,23 @@
                   
         }
 
+        public function login() {
+            $email = $this->validateParameter('email', $this->param['email'], STRING, false);
+             $password = $this->validateParameter('password', $this->param['password'], STRING, false);
+          
+               
+                $query = new Query;
+                $login = $query->get_single('user', array( 'password'=>md5($password), 'email'=>$email ), 'id', 'asc');
+                if($login){
+                    $message = 'User Login Successfully';
+                    $this->returnResponse(SUCCESS_RESPONSE, $login);
+                }else{
+                    $message = 'Failed to Login User';
+                    $this->returnResponse(FAILED_RESPONSE, $login);
+                }
+                  
+        }
+
         public function addToCart() {
             $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);
             $cust_id = $this->validateParameter('cust_id', $this->param['cust_id'], INTEGER, false);
@@ -69,64 +86,65 @@
             }
               
     }
-    public function carts() {
-          
+        public function carts() {
+            
+                $query = new Query;
+                $cart = $query->get_cart();
+                if($cart){
+                // $message = 'User Created Successfully';
+                    $this->returnResponse(SUCCESS_RESPONSE, $cart);
+                }else{
+                // $message = 'Failed to Create User';
+                    $this->returnResponse(FAILED_RESPONSE, $cart);
+                }
+                
+        }
+
+        public function cartAmount() {
+            
             $query = new Query;
-            $cart = $query->get_cart();
+            $cart = $query->get_cart_amt();
             if($cart){
-               // $message = 'User Created Successfully';
+            // $message = 'User Created Successfully';
                 $this->returnResponse(SUCCESS_RESPONSE, $cart);
             }else{
-               // $message = 'Failed to Create User';
+            // $message = 'Failed to Create User';
                 $this->returnResponse(FAILED_RESPONSE, $cart);
             }
-              
+            
     }
 
-    public function cartAmount() {
-          
-        $query = new Query;
-        $cart = $query->get_cart_amt();
-        if($cart){
-           // $message = 'User Created Successfully';
-            $this->returnResponse(SUCCESS_RESPONSE, $cart);
-        }else{
-           // $message = 'Failed to Create User';
-            $this->returnResponse(FAILED_RESPONSE, $cart);
+        public function property() {
+            $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
+            
+                $query = new Query;
+                $property = $query->get_single('images', array('property_id'=>$prop_id),'id', 'asc');
+                if($property){
+                // $message = 'User Created Successfully';
+                    $this->returnResponse(SUCCESS_RESPONSE, $property);
+                }else{
+                // $message = 'Failed to Create User';
+                    $this->returnResponse(FAILED_RESPONSE, $property);
+                }
+                
         }
-          
-}
 
-    public function property() {
-        $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
-        
-            $query = new Query;
-            $property = $query->get_single('images', array('property_id'=>$prop_id),'id', 'asc');
-            if($property){
-            // $message = 'User Created Successfully';
-                $this->returnResponse(SUCCESS_RESPONSE, $property);
-            }else{
-            // $message = 'Failed to Create User';
-                $this->returnResponse(FAILED_RESPONSE, $property);
+        public function propById() {
+                $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
+                
+                    $query = new Query;
+                    $property = $query->get_single('property', array('id'=>$prop_id),'id', 'asc');
+                    if($property){
+                    // $message = 'User Created Successfully';
+                        $this->returnResponse(SUCCESS_RESPONSE, $property);
+                    }else{
+                    // $message = 'Failed to Create User';
+                        $this->returnResponse(FAILED_RESPONSE, $property);
+                    }
+                    
             }
-            
-    }
-
-    public function propById() {
-        $prop_id = $this->validateParameter('prop_id', $this->param['prop_id'], INTEGER, false);           
-        
-            $query = new Query;
-            $property = $query->get_single('property', array('id'=>$prop_id),'id', 'asc');
-            if($property){
-            // $message = 'User Created Successfully';
-                $this->returnResponse(SUCCESS_RESPONSE, $property);
-            }else{
-            // $message = 'Failed to Create User';
-                $this->returnResponse(FAILED_RESPONSE, $property);
-            }
-            
-    }
-   public  function searchProperty() {
+       
+            public  function searchProperty() {
         $term = $this->validateParameter('term', $this->param['term'], STRING, false);           
         
             $query = new Query;
