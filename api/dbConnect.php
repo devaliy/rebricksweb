@@ -4,15 +4,15 @@
      */
 
      class DbConnect {
-        // private $server = 'localhost';
-        // private $dbname = 'farmasng_redbricks';
-        // private $user = 'farmasng_ali';
-        // private $pass = 'FuTa@(2017)';
-
         private $server = 'localhost';
-        private $dbname = 'redbrick';
-        private $user = 'root';
-        private $pass = '';
+        private $dbname = 'farmasng_redbricks';
+        private $user = 'farmasng_ali';
+        private $pass = 'FuTa@(2017)';
+
+        // private $server = 'localhost';
+        // private $dbname = 'redbrick';
+        // private $user = 'root';
+        // private $pass = '';
 
        public function connect(){
              try{
