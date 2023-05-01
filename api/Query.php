@@ -111,7 +111,9 @@ class  Query {
     
         public function get_property()
         {
-            $stmt = $this->pdo->prepare("SELECT property.*, images.image_url FROM property JOIN images ON property.id =images.property_id  ORDER BY images.id asc");
+            $stmt = $this->pdo->prepare("SELECT DISTINCT property.*, images.image_url 
+            FROM property 
+            INNER JOIN images ON property.id = images.property_id;");
             $stmt->execute();
             $multi = $stmt->fetchAll(PDO::FETCH_OBJ);
         
