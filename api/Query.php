@@ -132,7 +132,7 @@ class  Query {
     
         public function get_cart()
         {
-            $stmt = $this->pdo->prepare("SELECT property.prop_name, property.prop_amount, property.prop_address, property.image_id FROM cart JOIN property ON cart.prop_id =property.id ORDER BY property.id desc");
+            $stmt = $this->pdo->prepare("SELECT property.prop_name, property.prop_amount, property.prop_address, property.image_url FROM cart JOIN property ON cart.prop_id =property.id ORDER BY property.id desc");
             $stmt->execute();
             $multi = $stmt->fetchAll(PDO::FETCH_OBJ);
         
