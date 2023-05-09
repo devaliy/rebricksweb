@@ -12,7 +12,7 @@ include('includes/sidebar.php');
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Dashboard
+                <h2>Dashboard welcome to mac 
                 <small class="text-muted">Welcome to Compass</small>
                 </h2>
             </div>
