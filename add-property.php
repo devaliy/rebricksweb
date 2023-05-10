@@ -57,6 +57,7 @@ include('includes/sidebar.php');
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
+                                    <label>Property Description</label>
                                         <textarea required  rows="4" name="prop_desc" class="form-control no-resize" placeholder="Property Description"></textarea>
                                     </div>
                                 </div>
@@ -83,11 +84,13 @@ include('includes/sidebar.php');
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
+                                <label>Property Price</label>
                                     <input  required type="text" name="prop_amount" class="form-control" placeholder="Price / Rent">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
+                                <label>Property Address</label>
                                     <textarea required  rows="4" name="prop_address" class="form-control no-resize" placeholder="Property Address"></textarea>
                                 </div>
                             </div>
@@ -95,11 +98,13 @@ include('includes/sidebar.php');
                         <div class="row clearfix">
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
+                                <label>Number of Bedrooms</label>
                                     <input  required type="text" name="prop_bedroom" class="form-control" placeholder="Bedrooms">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
+                                <label>Land Size</label>
                                     <input  required type="text" class="form-control" name="prop_squareft"  placeholder="Square ft">
                                 </div>
                             </div>
@@ -110,6 +115,7 @@ include('includes/sidebar.php');
                             </div>
                             <div class="col-lg-3 col-dm-3 col-sm-6">
                                 <div class="form-group">
+                                <label> Year Built</label>
                                     <input  required type="text" class="form-control" name="prop_year_built"  placeholder="Year Built">
                                 </div>
                             </div>
@@ -125,31 +131,37 @@ include('includes/sidebar.php');
                         <div class="row">
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
+                                <label>Number of Dining Room</label>
                                     <input  required type="text" name="dining_room"  class="form-control" placeholder="Dining Room">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
+                                <label>Property Kitchen</label>
                                     <input  required type="text"  name="prop_kitchen"  class="form-control" placeholder="Kitchen">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-line">
+                                <label>Number of Living Room </label>
                                     <input  required type="text"  name="prop_living_room"  class="form-control" placeholder="Living Room">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
+                                <label>Property Master Bedroom</label>
                                     <input  required type="text"  name="prop_master_bedroom"  class="form-control" placeholder="Master Bedroom">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
+                                <label>Property Bedroom 2</label>
                                     <input  required type="text"  name="prop_beedroom_2"  class="form-control" placeholder="Bedroom 2">
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="form-group">
+                                <label>Property Other Rooms</label>
                                     <input  required type="text"  name="prop_other_room"  class="form-control" placeholder="Other Room">
                                 </div>
                             </div>
