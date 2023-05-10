@@ -7,8 +7,8 @@
                 <div class="user-info">
                     <div class="image"><a href="profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                     <div class="detail">
-                        <h4>Michael</h4>
-                        <small>Agent</small>                        
+                        <h4>Aliy Adedigba</h4>
+                        <small>Admin</small>                        
                     </div>
                     <a href="events" title="Events"><i class="zmdi zmdi-calendar"></i></a>
                     <a href="mail-inbox" title="Inbox"><i class="zmdi zmdi-email"></i></a>
@@ -54,54 +54,7 @@
                     <li><a href="blog-dashboard">Blog</a></li>
                 </ul>
             </li>
-            <li class="header">EXTRA COMPONENTS</li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-delicious"></i><span>Widgets</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="widgets-app">Apps Widgetse</a></li>
-                    <li><a href="widgets-data">Data Widgetse</a></li>
-                </ul>
-            </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="sign-in">Sign In</a> </li>
-                    <li><a href="sign-up">Sign Up</a> </li>
-                    <li><a href="forgot-password">Forgot Password</a> </li>
-                    <li><a href="404">Page 404</a> </li>
-                    <li><a href="500">Page 500</a> </li>
-                    <li><a href="page-offline">Page Offline</a> </li>
-                    <li><a href="locked">Locked Screen</a> </li>
-                </ul>
-            </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Sample Pages</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="blank">Blank Page</a> </li>
-                    <li> <a href="image-gallery">Image Gallery</a> </li>
-                    <li><a href="profile">Profile</a></li>
-                    <li><a href="timeline">Timeline</a></li>
-                    <li><a href="pricing">Pricing</a></li>
-                    <li><a href="invoices">Invoices</a></li>
-                    <li><a href="search-results">Search Results</a></li>
-                </ul>
-            </li>
-            <li class="header">Extra</li>
-            <li>
-                <div class="progress-container progress-primary m-t-10">
-                    <span class="progress-badge">Traffic this Month</span>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%;">
-                            <span class="progress-value">67%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-container progress-info">
-                    <span class="progress-badge">Server Load</span>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                            <span class="progress-value">86%</span>
-                        </div>
-                    </div>
-                </div>
-            </li>
+           
         </ul>
     </div>
 </aside>
