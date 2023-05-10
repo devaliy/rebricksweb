@@ -44,11 +44,13 @@ include('includes/sidebar.php');
                     <div class="row clearfix  ">
                             <div class="col-sm-6">
                                 <div class="form-group">
+                                    <label>Property Name</label>
                                     <input  required type="text" name="prop_name" class="form-control" placeholder="Property Name">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
+                                    <label>Property Location</label>
                                     <input  required type="text" name="prop_location" class="form-control" placeholder="Property Location">
                                 </div>
                             </div>
