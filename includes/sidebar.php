@@ -29,9 +29,9 @@
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-city"></i><span>Types</span> </a>
                 <ul class="ml-menu">
                     <li><a href="apartment">Apartment</a></li>
-                    <li><a href="office">Office</a></li>
+                    <!-- <li><a href="office">Office</a></li>
                     <li><a href="shop">Shop</a></li>
-                    <li><a href="villa">Villa</a></li>
+                    <li><a href="villa">Villa</a></li> -->
                 </ul>
             </li>
             <!-- <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-outline"></i><span>Agents</span> </a>
