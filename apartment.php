@@ -129,7 +129,7 @@ include('includes/sidebar.php');
             <div class="col-lg-4 col-md-12">
                 <div class="card property_list">
                     <div class="property_image">
-                        <img class="img-thumbnail img-fluid" src="assets/images/image-gallery/5.jpg" alt="img">
+                        <img class="img-thumbnail img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2dTXI3aeyBKyP9t-R0PUjJ_eWO3od2uYTpA&usqp=CAU" alt="img">
                         <span class="badge badge-danger">For Sale</span>
                     </div>
                     <div class="body">
@@ -153,7 +153,7 @@ include('includes/sidebar.php');
             <div class="col-lg-4 col-md-12">
                 <div class="card property_list">
                     <div class="property_image">
-                        <img class="img-thumbnail img-fluid" src="assets/images/image-gallery/5.jpg" alt="img">
+                        <img class="img-thumbnail img-fluid" src="https://2942993.fs1.hubspotusercontent-na1.net/hub/2942993/hubfs/37DudleyStreet-Bardon.jpeg?width=600&name=37DudleyStreet-Bardon.jpeg" alt="img">
                         <span class="badge badge-danger">For Sale</span>
                     </div>
                     <div class="body">
