@@ -13,7 +13,7 @@ include('includes/sidebar.php');
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <h2>Apartment list
-                    <small class="text-muted">Welcome to Compass</small>
+                    <small class="text-muted">Welcome to Redbrick</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
@@ -33,7 +33,7 @@ include('includes/sidebar.php');
             <div class="col-lg-4 col-md-12">
                 <div class="card property_list">
                     <div class="property_image">
-                        <img class="img-thumbnail img-fluid" src="assets/images/image-gallery/5.jpg" alt="img">
+                        <img class="img-thumbnail img-fluid" src="https://images.nigeriapropertycentre.com/properties/images/736500/05f63eae81ab66-5-bedroom-detached-beauty-detached-duplexes-for-sale-idado-lekki-lagos.jpg" alt="img">
                         <span class="badge badge-danger">For Sale</span>
                     </div>
                     <div class="body">
@@ -57,7 +57,7 @@ include('includes/sidebar.php');
             <div class="col-lg-4 col-md-12">
                 <div class="card property_list">
                     <div class="property_image">
-                        <img class="img-thumbnail img-fluid" src="assets/images/image-gallery/5.jpg" alt="img">
+                        <img class="img-thumbnail img-fluid" src="https://miro.medium.com/v2/resize:fit:1400/1*6rJJX0Lu9jfeSAt9RkzrOw.jpeg" alt="img">
                         <span class="badge badge-warning">For Rent</span>
                     </div>
                     <div class="body">
@@ -81,7 +81,7 @@ include('includes/sidebar.php');
             <div class="col-lg-4 col-md-12">
                 <div class="card property_list">
                     <div class="property_image">
-                        <img class="img-thumbnail img-fluid" src="assets/images/image-gallery/5.jpg" alt="img">
+                        <img class="img-thumbnail img-fluid" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/76cca85c-2ff6-445e-93df-6b26561b0bfe-florida-mansion-exterior.jpg" alt="img">
                         <span class="badge badge-danger">For Sale</span>
                     </div>
                     <div class="body">
@@ -105,7 +105,7 @@ include('includes/sidebar.php');
             <div class="col-lg-4 col-md-12">
                 <div class="card property_list">
                     <div class="property_image">
-                        <img class="img-thumbnail img-fluid" src="assets/images/image-gallery/5.jpg" alt="img">
+                        <img class="img-thumbnail img-fluid" src="https://i2.au.reastatic.net/800x600/b7a139c412fc8fa4427fae47661fc8b5bb9d9e22b91719ba155d9da6a6b8861c/main.jpg" alt="img">
                         <span class="badge badge-danger">For Sale</span>
                     </div>
                     <div class="body">
