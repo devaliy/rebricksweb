@@ -40,8 +40,8 @@ include('includes/sidebar.php');
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358;390,000 - &#8358;430,000</h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,Alausa, Ikeja.</a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>23, Ogunlowo Street, Alausa, Ikeja., NY 201609</p>
                                 <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
                             </div>
                             <div class="property-action m-t-15">
@@ -64,8 +64,8 @@ include('includes/sidebar.php');
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358;390,000 - &#8358;430,000</h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,Alausa, Ikeja.</a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>23, Ogunlowo Street, Alausa, Ikeja., NY 201609</p>
                                 <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
                             </div>
                             <div class="property-action m-t-15">
@@ -88,8 +88,8 @@ include('includes/sidebar.php');
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358;390,000 - &#8358;430,000</h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,Alausa, Ikeja.</a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>23, Ogunlowo Street, Alausa, Ikeja., NY 201609</p>
                                 <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
                             </div>
                             <div class="property-action m-t-15">
@@ -112,8 +112,8 @@ include('includes/sidebar.php');
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358;390,000 - &#8358;430,000</h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,Alausa, Ikeja.</a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>23, Ogunlowo Street, Alausa, Ikeja., NY 201609</p>
                                 <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
                             </div>
                             <div class="property-action m-t-15">
@@ -136,8 +136,8 @@ include('includes/sidebar.php');
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358;390,000 - &#8358;430,000</h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,Alausa, Ikeja.</a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>23, Ogunlowo Street, Alausa, Ikeja., NY 201609</p>
                                 <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
                             </div>
                             <div class="property-action m-t-15">
@@ -160,8 +160,8 @@ include('includes/sidebar.php');
                         <div class="property-content">
                             <div class="detail">
                                 <h5 class="text-success m-t-0 m-b-0">&#8358;390,000 - &#8358;430,000</h5>
-                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,New York</a></h4>
-                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>245 E 20th St, New York, NY 201609</p>
+                                <h4 class="m-t-0"><a href="#" class="col-blue-grey">4BHK Alexander Court,Alausa, Ikeja.</a></h4>
+                                <p class="text-muted"><i class="zmdi zmdi-pin m-r-5"></i>23, Ogunlowo Street, Alausa, Ikeja., NY 201609</p>
                                 <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam gravida magna et fringilla convallis. Pellentesque habitant morb</p>
                             </div>
                             <div class="property-action m-t-15">
